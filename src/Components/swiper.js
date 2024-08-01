@@ -1,67 +1,31 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const SwiperComponent = () => {
-  return (
-   <div className="container my-4 mx-auto basis-1/4">
-    <div className="header flex justify-between items-center  py-2">
-      <h5 className='font-medium'>Asset</h5>
-      <a href="#" className='text-emerald-400 font-medium'>View All</a>
-    </div>
-     <Swiper className='container '
-      spaceBetween={50}
-      slidesPerView={8}
-      navigation
-      pagination={{ clickable: true }}
-      autoplay={{ delay: 3000 }}
-      modules={[Navigation, Pagination, Autoplay]}
-    >
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 1" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 2" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 3" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 3" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 3" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 3" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 3" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 3" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 3" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 3" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 3" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 3" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 3" />
-      </SwiperSlide>
-    </Swiper>
-   </div>
-  );
+const SwiperBox = (props) => {
+  return(
+    <>
+        <SwiperSlide className="bg-white p-3 w-40">
+              <div className="header flex items-center justify-start">
+                <div className="image h-8 w-8 bg-black rounded-full">
+                  <img src="{props.image}" alt="" className="w-full h-full"  />
+                </div>
+                <div className="celeb-name">
+                  <h4 className="font-bold text-md m-0">{props.Cname}</h4>
+                  <div className="flex justify-between gap-4 items-center m-0 font-normal">
+                    <h4 className="m-0 font-normal">{props.price1}</h4>
+                    <p className="m-0 p-0 text-emerald-500 font-normal">{props.price2}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="chart-grade">{props.barimage}</div>
+              <div className="celeb-money">
+                <h4>{props.bprice1}</h4>
+                <h4>{props.bprice2}</h4>
+              </div>
+            </SwiperSlide>
+
+    </>
+  )
 };
 
-export default SwiperComponent;
+export default SwiperBox

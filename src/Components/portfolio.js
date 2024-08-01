@@ -1,7 +1,15 @@
-import React from "react";
-import { FaSearch, FaBell,FaEye,FaWallet,FaRegArrowAltCircleDown  } from "react-icons/fa";
+import {React,useState} from "react";
+import { FaSearch,FaEyeSlash, FaBell,FaEye,FaWallet,FaRegArrowAltCircleDown  } from "react-icons/fa";
+
 import { FaArrowsDownToLine } from "react-icons/fa6";
 const Portfolio = () => {
+  
+    const [isVisible, setIsVisible] = useState(true);
+  
+    const handleToggleVisibility = () => {
+      setIsVisible(!isVisible);
+    };
+
   return (
     <>
       <div className="container">
@@ -19,8 +27,13 @@ const Portfolio = () => {
                     <h3 className="font-semibold text-2xl">$,7825.96</h3>
                 </div>
                 <div className="flex flex-col items-end justify-center">
-                    <FaEye/>
-                    <h3 className="font-semibold text-xl m-0">+3,865.46</h3>
+                <button onClick={handleToggleVisibility} className="mb-2">
+            {isVisible ? <FaEye /> : <FaEyeSlash />}
+              </button>
+
+                    <h3 className="font-semibold text-xl m-0">
+                    
+                    {isVisible? "+3865.46" :"•••••••"}</h3>
                     <h6 className="font-semibold text-green-700 text-sm m-0">+157.909%</h6>
                 </div>
             </div>
