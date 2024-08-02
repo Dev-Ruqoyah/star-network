@@ -42,22 +42,22 @@ const Celebrity = () => {
               // when window width is >= 640px
               640: {
                 slidesPerView: 2,
-                spaceBetween: 20,
+                spaceBetween: 4,
               },
               // when window width is >= 768px
               768: {
                 slidesPerView: 3,
-                spaceBetween: 30,
+                spaceBetween: 5,
               },
               // when window width is >= 1024px
               1024: {
                 slidesPerView: 4,
-                spaceBetween: 40,
+                spaceBetween: 6,
               },
               // when window width is >= 1280px
               1280: {
                 slidesPerView: 5,
-                spaceBetween: 50,
+                spaceBetween: 7,
               },
             }}
   
