@@ -1,5 +1,6 @@
 import {React,useState} from "react";
-import { FaSearch,FaEyeSlash, FaBell,FaEye,FaWallet,FaRegArrowAltCircleDown  } from "react-icons/fa";
+import { FaSearch,FaEyeSlash, FaBell,FaEye,FaWallet,FaRegArrowAltCircleDown, FaArrowAltCircleUp,FaArrowAltCircleDown } from "react-icons/fa";
+import { MdKeyboardCommandKey, MdSearch } from 'react-icons/md';
 
 import { FaArrowsDownToLine } from "react-icons/fa6";
 const Portfolio = () => {
@@ -15,8 +16,9 @@ const Portfolio = () => {
       <div className="container">
         <div className="header flex justify-center items-center mt-2 gap-2">
           <div className="search-bar  px-2 border bg-gray-200 flex rounded-sm items-center w-2/5">
-            <FaSearch />
+            <FaSearch className="text-xl" />
             <input type="text" className=" bg-transparent text-center w-full py-2 outline-0 border" placeholder="Enter KeyWord" />
+            <MdKeyboardCommandKey className="text-xl"/>
           </div>
           <FaBell/>
         </div>
@@ -28,7 +30,7 @@ const Portfolio = () => {
                 </div>
                 <div className="flex flex-col items-end justify-center">
                 <button onClick={handleToggleVisibility} className="mb-2">
-            {isVisible ? <FaEye /> : <FaEyeSlash />}
+            {isVisible ?  <FaEyeSlash />  : <FaEye />}
               </button>
 
                     <h3 className="font-semibold text-xl m-0">
@@ -40,12 +42,12 @@ const Portfolio = () => {
             <div className="balance-action flex justify-between items-center">
                 <div className="flex items-center justify-center gap-2">
                     <div className="flex items-center justify-center bg-emerald-100 p-2 px-4 rounded-sm text-emerald-900 gap-1">
-                        <FaRegArrowAltCircleDown />
+                        <FaArrowAltCircleDown />
                         <p >Deposit</p>
                     </div>
 
                     <div className="flex items-center justify-center bg-emerald-100 p-2 px-4 rounded-sm text-emerald-900 gap-1">
-                        <FaArrowsDownToLine/>
+                        <FaArrowAltCircleUp/>
                         <p >Withdrawal</p>
                     </div>
                 </div>

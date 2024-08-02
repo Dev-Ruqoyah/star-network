@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FaBars, FaHome, FaUser, FaCog, FaInfoCircle, FaSignOutAlt } from 'react-icons/fa';
+import { FaBars, FaHome,FaClock, FaUser, FaCog, FaInfoCircle, FaSignOutAlt, FaChartLine, FaExchangeAlt, FaIndustry, FaHeadset } from 'react-icons/fa';
 import { FaChevronDown ,FaChevronUp} from 'react-icons/fa6';
+import { FiBox } from 'react-icons/fi';
 
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -35,7 +36,7 @@ const DropdownMenu = () => {
                 tabIndex="-1"
                 id="menu-item-0"
               >
-                <FaHome className="mr-3 text-xl" /> Portfolio
+                <FiBox className="mr-3 text-xl" /> Portfolio
               </a>
               <a
                 href="#profile"
@@ -44,7 +45,7 @@ const DropdownMenu = () => {
                 tabIndex="-1"
                 id="menu-item-1"
               >
-                <FaUser className="mr-3" /> Invest
+                <FaChartLine className="mr-3" /> Invest
               </a>
               <a
                 href="#settings"
@@ -53,7 +54,7 @@ const DropdownMenu = () => {
                 tabIndex="-1"
                 id="menu-item-2"
               >
-                <FaCog className="mr-3" /> Stake
+                <FaClock className="mr-3" /> Stake
               </a>
               <a
                 href="#about"
@@ -62,7 +63,7 @@ const DropdownMenu = () => {
                 tabIndex="-1"
                 id="menu-item-3"
               >
-                <FaInfoCircle className="mr-3" /> Trade
+                <FaExchangeAlt className="mr-3" /> Trade
               </a>
               <a
                 href="#logout"
@@ -71,7 +72,7 @@ const DropdownMenu = () => {
                 tabIndex="-1"
                 id="menu-item-4"
               >
-                <FaSignOutAlt className="mr-3" /> Mine
+                <FaIndustry className="mr-3" /> Mine
               </a>
             </div>
           </div>
@@ -95,7 +96,7 @@ const DropdownMenu = () => {
           tabIndex="-1"
           id="menu-item-6"
         >
-          <FaCog className="mr-3" /> Support
+          <FaHeadset className="mr-3" /> Support
         </a>
       </div>
     </div>
