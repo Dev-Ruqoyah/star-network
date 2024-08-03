@@ -32,8 +32,8 @@ const Celebrity = () => {
             </div>
           <Swiper
             className="container "
-            spaceBetween={5}
-            slidesPerView={6}
+            spaceBetween={4}
+            slidesPerView={2}
           
             pagination={{ clickable: true }}
             autoplay={{ delay: 3000 }}
@@ -46,7 +46,7 @@ const Celebrity = () => {
               },
               // when window width is >= 768px
               768: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 5,
               },
               // when window width is >= 1024px

@@ -14,8 +14,11 @@ const Portfolio = () => {
   return (
     <>
       <div className="container">
-        <div className="header flex justify-center items-center mt-2 gap-2">
-          <div className="search-bar  px-2 border bg-gray-200 flex rounded-sm items-center w-2/5">
+        <div className="header flex justify-center items-center mt-4 md:mt-2 gap-2">
+        <div className="image h-12 rounded-full md:hidden   w-12">
+                <img src="https://img.freepik.com/free-photo/portrait-attractive-dark-skinned-student-wearing-checkered-shirt-with-confident-joyful-expression-standing-chalkboard-wall_273609-5907.jpg?t=st=1722160405~exp=1722164005~hmac=4861d708d64b1de37ecc6900a80d79dfaff85921efa1c49cde4c134e7e183a9f" className="rounded-full h-full w-full object-cover"  alt="profile picture" />
+            </div>
+          <div className="search-bar  px-2 border bg-gray-200 flex rounded-sm items-center md:w-4/5 lg:w-2/5">
             <FaSearch className="text-xl" />
             <input type="text" className=" bg-transparent text-center w-full py-2 outline-0 border" placeholder="Enter KeyWord" />
             <MdKeyboardCommandKey className="text-xl"/>
@@ -41,15 +44,15 @@ const Portfolio = () => {
             </div>
             <div className="balance-action flex justify-between items-center">
                 <div className="flex items-center justify-center gap-2">
-                    <div className="flex items-center justify-center bg-emerald-100 p-2 px-4 rounded-sm text-emerald-900 gap-1">
+                    <button className="flex items-center justify-center bg-emerald-100 p-2 md:px-4 rounded-sm text-emerald-900 gap-1">
                         <FaArrowAltCircleDown />
                         <p >Deposit</p>
-                    </div>
+                    </button>
 
-                    <div className="flex items-center justify-center bg-emerald-100 p-2 px-4 rounded-sm text-emerald-900 gap-1">
+                    <button className="flex items-center justify-center bg-emerald-100 p-2 md:px-4 rounded-sm text-emerald-900 gap-1">
                         <FaArrowAltCircleUp/>
                         <p >Withdrawal</p>
-                    </div>
+                    </button>
                 </div>
                 <div className="wallet flex items-center justify-center gap-2">
                     <FaWallet/>
