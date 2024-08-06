@@ -3,11 +3,12 @@ import Sidebar from "../Components/sidebar";
 import Portfolio from "../Components/portfolio";
 import Celebrity from "../Components/celebrity";
 import PopularListing from "../Components/Populartable";
+import Navbar from "./navbar";
 
 const Dashboard = () => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-5 overflow-hidden h-screen">
+      <div className="grid grid-cols-1 static md:grid-cols-5 overflow-hidden h-screen">
         <div className="hidden md:block md:basis-1/6 lg:basis-1/5 h-screen">
           <Sidebar />
         </div>
@@ -16,6 +17,7 @@ const Dashboard = () => {
           <Celebrity />
           <PopularListing />
         </div>
+        <Navbar/>
       </div>
     </>
   );
