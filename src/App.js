@@ -31,7 +31,7 @@ const App = () => {
         {/* <DropdownMenu /> */}
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/invest" element={<Invest />} />
+          <Route path="/invest.js" element={<Invest />} />
           {/* <Route path="/stake" element={<Stake />} />
           <Route path="/trade" element={<Trade />} />
           <Route path="/mine" element={<Mine />} />
