@@ -3,6 +3,8 @@ import Sidebar from "../Components/sidebar";
 import Navbar from "./navbar";
 import { MdKeyboardCommandKey } from "react-icons/md";
 import { FaSearch, FaBell } from "react-icons/fa";
+import { Outlet } from 'react-router-dom';
+import Favourite from "../Components/Favourite";
 
 const Invest = () => {
   const [activeTab, setActiveTab] = useState("favourite");
@@ -30,42 +32,43 @@ const Invest = () => {
 
           {/* INVEST NAVBAR */}
           <div className="w-full h-screen p-4">
-            <nav className="flex space-x-4 border-b pb-2 mb-4">
+            <h3 className="text-2xl fw-bold text-yellow-300 mb-2">Invest In Your Stars</h3>
+            <nav className="flex items-center justify-between pb-2 mb-4">
               <button
-                className={`py-2 px-4 ${
-                  activeTab === "favourite" ? "border-b-2 border-blue-500" : ""
+                className={`py-2 border-slate-200 border-2 rounded-xl w-28 h-12 ${
+                  activeTab === "favourite" ? " bg-emerald-300 " : ""
                 }`}
                 onClick={() => setActiveTab("favourite")}
               >
                 Favourite
               </button>
               <button
-                className={`py-2 px-4 ${
-                  activeTab === "trending" ? "border-b-2 border-blue-500" : ""
+                className={`py-2 border-slate-200 border-2 rounded-xl w-28 h-12 ${
+                  activeTab === "trending" ? " bg-emerald-300 " : ""
                 }`}
                 onClick={() => setActiveTab("trending")}
               >
                 Trending
               </button>
               <button
-                className={`py-2 px-4 ${
-                  activeTab === "gainers" ? "border-b-2 border-blue-500" : ""
+                className={`py-2 border-slate-200 border-2 rounded-xl w-28 h-12 ${
+                  activeTab === "gainers" ? " bg-emerald-300 " : ""
                 }`}
                 onClick={() => setActiveTab("gainers")}
               >
                 Gainers
               </button>
               <button
-                className={`py-2 px-4 ${
-                  activeTab === "losers" ? "border-b-2 border-blue-500" : ""
+                className={`py-2 border-slate-200 border-2 rounded-xl w-28 h-12 ${
+                  activeTab === "losers" ? " bg-emerald-300 " : ""
                 }`}
                 onClick={() => setActiveTab("losers")}
               >
                 Losers
               </button>
               <button
-                className={`py-2 px-4 ${
-                  activeTab === "new" ? "border-b-2 border-blue-500" : ""
+                className={`py-2 border-slate-200 border-2 rounded-xl w-28 h-12 ${
+                  activeTab === "new" ? " bg-emerald-300 " : ""
                 }`}
                 onClick={() => setActiveTab("new")}
               >
@@ -76,8 +79,11 @@ const Invest = () => {
             <div>
               {activeTab === "favourite" && (
                 <div className="content">
-                  <h2>Favourite Content</h2>
-                  <p>This is the favourite section.</p>
+                   <Favourite />
+                  <Outlet />
+                 
+                  
+                  
                 </div>
               )}
               {activeTab === "trending" && (

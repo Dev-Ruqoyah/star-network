@@ -45,7 +45,7 @@ const DropdownMenu = () => {
                 <span className="md:hidden lg:block">Portfolio</span>
               </Link>
               <Link
-                to="/invest.js"
+                to="/invest"
                 className={`text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${
                   activePage === 'Invest' ? 'bg-emerald-200' : ''
                 }`}
