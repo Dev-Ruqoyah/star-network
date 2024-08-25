@@ -33,7 +33,7 @@ const Invest = () => {
           {/* INVEST NAVBAR */}
           <div className="w-full h-screen p-4">
             <h3 className="text-2xl fw-bold text-yellow-300 mb-2">Invest In Your Stars</h3>
-            <nav className="flex items-center justify-between pb-2 mb-4">
+            <nav className="flex flex-wrap items-center justify-between sm:gap-4 sm:mb-2 pb-2 mb-4">
               <button
                 className={`py-2 border-slate-200 border-2 rounded-xl w-28 h-12 ${
                   activeTab === "favourite" ? " bg-emerald-300 " : ""
