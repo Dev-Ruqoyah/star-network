@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../images/logo.jpg";
-import { FaBars,FaCog } from 'react-icons/fa';
+
 import { MdDehaze } from 'react-icons/md';
 import DropdownMenu from "./dropdown";
 

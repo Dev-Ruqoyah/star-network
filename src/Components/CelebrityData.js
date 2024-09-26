@@ -71,7 +71,7 @@ export const celebrities = [
         chartData: [15, 25, 35] // Example data for bar chart
       },
       {
-        id: 6,
+        id: 7,
         name: "Brain Jotter",
         image: brainjotter,
         details: "This is the full detail of Celebrity Four.",
@@ -81,7 +81,7 @@ export const celebrities = [
         chartData: [15, 25, 35] // Example data for bar chart
       },  
         {
-        id: 7,
+        id: 8,
         name: "Cole Palmer",
         image: colepalmer,
         details: "This is the full detail of Celebrity Two.",
@@ -91,7 +91,7 @@ export const celebrities = [
         chartData: [15, 25, 35] // Example data for bar chart
       },
         {
-        id: 8,
+        id: 9,
         name: "Davido",
         image: willsmith,
         details: "Davido is a prominent Nigerian singer and songwriter   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil provident quas recusandae architecto iure. Saepe nesciunt, sit temporibus atque exercitationem sequi at in, eum magni totam perferendis voluptate nam deserunt!",

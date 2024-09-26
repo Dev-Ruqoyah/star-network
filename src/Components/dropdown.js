@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link for routing
+import { NavLink } from 'react-router-dom'; // Use NavLink for active styling
 import { FaBars, FaChartLine, FaClock, FaExchangeAlt, FaIndustry, FaCog, FaHeadset, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { FiBox } from 'react-icons/fi';
 
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const [activePage, setActivePage] = useState('Dashboard');
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
-  };
-
-  const handlePageChange = (page) => {
-    setActivePage(page);
   };
 
   return (
@@ -34,82 +29,61 @@ const DropdownMenu = () => {
             tabIndex="-1"
           >
             <div className="py-1 flex flex-col gap-2 w-full" role="none">
-              <Link
+              <NavLink
                 to="/"
-                className={`text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${
-                  activePage === 'Dashboard' ? 'bg-emerald-200' : ''
-                }`}
-                onClick={() => handlePageChange('Dashboard')}
+                className={({ isActive }) => `text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${isActive ? 'bg-emerald-200' : ''}`}
               >
-                <FiBox className="mr-3 text-xl md:block" /> 
+                <FiBox className="mr-3 text-xl md:block" />
                 <span className="md:hidden lg:block">Portfolio</span>
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/invest"
-                className={`text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${
-                  activePage === 'Invest' ? 'bg-emerald-200' : ''
-                }`}
-                onClick={() => handlePageChange('Invest')}
+                className={({ isActive }) => `text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${isActive ? 'bg-emerald-200' : ''}`}
               >
-                <FaChartLine className="mr-3 md:block" /> 
+                <FaChartLine className="mr-3 md:block" />
                 <span className="md:hidden lg:block">Invest</span>
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/stake"
-                className={`text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${
-                  activePage === 'Stake' ? 'bg-emerald-200' : ''
-                }`}
-                onClick={() => handlePageChange('Stake')}
+                className={({ isActive }) => `text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${isActive ? 'bg-emerald-200' : ''}`}
               >
-                <FaClock className="mr-3 md:block" /> 
+                <FaClock className="mr-3 md:block" />
                 <span className="md:hidden lg:block">Stake</span>
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/trade"
-                className={`text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${
-                  activePage === 'Trade' ? 'bg-emerald-200' : ''
-                }`}
-                onClick={() => handlePageChange('Trade')}
+                className={({ isActive }) => `text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${isActive ? 'bg-emerald-200' : ''}`}
               >
-                <FaExchangeAlt className="mr-3 md:block" /> 
+                <FaExchangeAlt className="mr-3 md:block" />
                 <span className="md:hidden lg:block">Trade</span>
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/mine"
-                className={`text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${
-                  activePage === 'Mine' ? 'bg-emerald-200' : ''
-                }`}
-                onClick={() => handlePageChange('Mine')}
+                className={({ isActive }) => `text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${isActive ? 'bg-emerald-200' : ''}`}
               >
-                <FaIndustry className="mr-3 md:block" /> 
+                <FaIndustry className="mr-3 md:block" />
                 <span className="md:hidden lg:block">Mine</span>
-              </Link>
+              </NavLink>
             </div>
           </div>
         )}
       </div>
 
       <div className="settings flex flex-col justify-end w-full">
-        <Link
+        <NavLink
           to="/settings"
-          className={`text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${
-            activePage === 'Settings' ? 'bg-emerald-200' : ''
-          }`}
-          onClick={() => handlePageChange('Settings')}
+          className={({ isActive }) => `text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${isActive ? 'bg-emerald-200' : ''}`}
         >
-          <FaCog className="mr-3 md:block" /> 
+          <FaCog className="mr-3 md:block" />
           <span className="md:hidden lg:block">Setting</span>
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/support"
-          className={`text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${
-            activePage === 'Support' ? 'bg-emerald-200' : ''
-          }`}
-          onClick={() => handlePageChange('Support')}
+          className={({ isActive }) => `text-gray-700 px-4 py-2 text-md flex items-center rounded-xl hover:bg-emerald-500 hover:text-black ${isActive ? 'bg-emerald-200' : ''}`}
         >
-          <FaHeadset className="mr-3 md:block" /> 
+          <FaHeadset className="mr-3 md:block" />
           <span className="md:hidden lg:block">Support</span>
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import {
   FaBell,
   FaEye,
   FaWallet,
-  FaRegArrowAltCircleDown,
+
   FaArrowAltCircleUp,
   FaArrowAltCircleDown,
 } from "react-icons/fa";
@@ -16,10 +16,11 @@ import { FiBox } from 'react-icons/fi';
 
 
 const Portfolio = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleToggleVisibility = () => {
     setIsVisible(!isVisible);
+    // localStorage.setItem('isVisible',isVisi)
   };
  
     const [isOpen, setIsOpen] = useState(true);
